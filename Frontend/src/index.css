@@ -1,0 +1,88 @@
+/* --- VARIABLES GLOBALES --- */
+:root {
+    --primary-color: #007bff; /* Azul para botones principales */
+    --secondary-color: #6c757d; /* Gris para botones secundarios */
+    --success-color: #28a745; /* Verde para éxito */
+    --error-color: #dc3545; /* Rojo para errores */
+    --background-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --spacing: 15px;
+}
+
+/* --- RESET Y TIPOGRAFÍA --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- ESTILOS DE TABLA (ProductTable) --- */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.product-table th, .product-table td {
+    padding: 12px var(--spacing);
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.product-table thead {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.product-table tr:hover {
+    background-color: #e2e6ea;
+}
+
+/* --- ESTILOS DE BOTONES (Global) --- */
+button {
+    padding: 8px 15px;
+    margin: 0 5px 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+button.edit-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+button.edit-button:hover {
+    background-color: #0056b3;
+}
+
+button.delete-button {
+    background-color: var(--error-color);
+    color: white;
+}
+button.delete-button:hover {
+    background-color: #bd2130;
+}
+
+.cancel-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+.cancel-button:hover {
+    background-color: #5a6268;
+}
